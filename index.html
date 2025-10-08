@@ -141,7 +141,7 @@
             padding: 0 5px;
         }
         .abs {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: #666;
             max-width: 100%;
             text-align: left; /* 说明文字左对齐，保持阅读习惯 */
@@ -342,10 +342,9 @@ These results highlight IntentionVLA as a promising paradigm for next-generation
                     <strong>Overview of IntentionVLA.</strong> IntentionVLA achieves intention inference and reasoning-guided manipulation in one unified model. We first pretrain the VLM backbone with diverse intention reasoning data. Then we finetune the action module to decode action chunk which follows the compact reasoning output.
                 </p>
             </div>
-        </div>
+
 
         <!-- Pipeline -->
-        <div class="content-section">
             <!-- <h3 class="section-name">
                 <i class="fa-regular fa-diagram-project"></i> Reasoning Data Annotation Pipeline
             </h3> -->
@@ -407,10 +406,13 @@ These results highlight IntentionVLA as a promising paradigm for next-generation
                     height: auto;
                     border-radius: 8px;
                     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-                ">
+                ">   
+            </div>
+
+            <div class="media-container">
                 <p class="media-caption">
                     <strong>Performance on OOD Manipulation Tasks.</strong> IntentionVLA generalizes beyond training data, understanding unseen intentions instructions, handling new objects with high precision, and responding quickly to human hand movements.
-                     These results demonstrate that IntentionVLA enables robust, intention-aware, and real-time HRI in dynamic scenarios.
+                    These results demonstrate that IntentionVLA enables robust, intention-aware, and real-time HRI in dynamic scenarios.
                 </p>
             </div>
 
@@ -418,7 +420,7 @@ These results highlight IntentionVLA as a promising paradigm for next-generation
                 Preserving Excellent Multimodal Reasoning Ability
             </h3> -->
             <div class="media-container">
-                <img src="assets/Multimodal_bench.png" alt="Performance on Multimodal Benchmark" style="max-width: 60%;">
+                <img src="assets/Multimodal_bench.png" alt="Performance on Multimodal Benchmark" style="max-width: 100%;">
                 <p class="media-caption">
                     <strong>Performance on Multimodal Benchmark.</strong> Benefiting from the diversity of our reasoning data and the effectiveness of the two-stage training paradigm, IntentionVLA preserves excellent mulimodal reasoning ability and consistently surpasses all VLA baselines, even
                     outperforms the strong MLLM LLaVA on three benchmarks.
