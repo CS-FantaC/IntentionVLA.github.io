@@ -274,8 +274,8 @@
         <!-- 演示视频区域 - 视频居中 -->
         <div class="content-section">
             <div class="media-container">
-                <video controls autoplay muted loop poster="assests/video_cover.png" preload="metadata" style="max-width: 80%;">
-                    <source src="assests/v1.mp4" type="video/mp4">
+                <video controls autoplay muted loop poster="assets/video_cover.png" preload="metadata" style="max-width: 80%;">
+                    <source src="assets/v1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <p class="media-caption">
@@ -290,7 +290,7 @@
                 <i class="fas fa-cogs"></i> Method
             </h2>
             <div class="media-container">
-                <img src="assests/model_arch.png" alt="IntentionVLA Architecture" style="max-width: 90%;">
+                <img src="assets/model_arch.png" alt="IntentionVLA Architecture" style="max-width: 90%;">
                 <p class="media-caption">
                     <strong>Overview of IntentionVLA.</strong> IntentionVLA achieves intention inference and reasoning-guided manipulation in one unified model. We first pretrain the VLM backbone with diverse intention reasoning data. Then we finetune the action module to decode action chunk which follows the compact reasoning output.
                 </p>
@@ -303,7 +303,7 @@
                 <i class="fa-project-diagram"></i> Pipeline
             </h2>
             <div class="media-container">
-                <img src="assests/pipeline.png" alt="Reasoning Data Annotation Pipeline" style="max-width: 90%;">
+                <img src="assets/pipeline.png" alt="Reasoning Data Annotation Pipeline" style="max-width: 90%;">
                 <p class="media-caption">
                     <strong>Overview of our proposed reasoning data and efficient annotation pipeline.</strong> The pipeline consists of 4 decoupled modules that can run in parallel for high annotation efficiency. Intention and spatial reasoning chains are further compressed into compact short reasoning for fast inference.
                 </p>
@@ -317,7 +317,7 @@
             </h2>
             <!-- In-Distribution Tasks -->
             <div class="media-container">
-                <img src="assests/table1.png" alt="Performance on In-Distribution Tasks" style="max-width: 100%;">
+                <img src="assets/table1.png" alt="Performance on In-Distribution Tasks" style="max-width: 100%;">
                 <p class="media-caption">
                     <strong>Performance on In-Distribution Tasks. </strong> IntentionVLA achieves the highest average
                     success rate on both direct instruction and intention instruction tasks.
@@ -335,20 +335,20 @@
                 min-height: 280px; /* 可选：设置最小高度，避免图片过矮时顶部紧贴标题（根据实际图片高度调整） */
             ">
                 /* simpler.jpeg：保持原有宽高比，通过网格对齐自动向下调整至居中 */
-                <img src="assests/table1.png" alt="Performance on In-Distribution Tasks" style="
+                <img src="assets/table1.png" alt="Performance on In-Distribution Tasks" style="
                     width: 100%;
                     height: auto; /* 不强制拉伸，保留原图比例 */
                     border-radius: 8px;
                     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
                 ">
                 /* calvin.jpeg：与simpler.jpeg垂直居中对齐 */
-                <img src="assests/table2_3.png" alt="Performance on OOD Tasks" style="
+                <img src="assets/table2_3.png" alt="Performance on OOD Tasks" style="
                     width: 100%;
                     height: auto;
                     border-radius: 8px;
                     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
                 ">
-                <img src="assests/unseen_ins.png" alt="Unseen Instructions Performance" style="
+                <img src="assets/unseen_ins.png" alt="Unseen Instructions Performance" style="
                     width: 100%;
                     height: auto;
                     border-radius: 8px;
@@ -356,7 +356,7 @@
                 ">
             </div> -->
             <!-- <div class="media-container">
-                <img src="assests/unseen_ins.png" alt="Unseen Instructions Performance" style="max-width: 100%;">
+                <img src="assets/unseen_ins.png" alt="Unseen Instructions Performance" style="max-width: 100%;">
                 <p class="media-caption">
                     <strong>Performance on unseen instructions. </strong> We
                     evaluate the model using 5 intention instructions that were
@@ -380,20 +380,20 @@
                 min-height: 280px; /* 可选：设置最小高度，避免图片过矮时顶部紧贴标题（根据实际图片高度调整） */
             ">
                 <!-- simpler.jpeg：保持原有宽高比，通过网格对齐自动向下调整至居中 -->
-                <!-- <img src="assests/table1.png" alt="Performance on In-Distribution Tasks" style="
+                <!-- <img src="assets/table1.png" alt="Performance on In-Distribution Tasks" style="
                     width: 100%;
                     height: auto; /* 不强制拉伸，保留原图比例 */
                     border-radius: 8px;
                     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
                 "> -->
                 <!-- calvin.jpeg：与simpler.jpeg垂直居中对齐 -->
-                <img src="assests/table2_3.png" alt="Performance on OOD Tasks" style="
+                <img src="assets/table2_3.png" alt="Performance on OOD Tasks" style="
                     width: 100%;
                     height: auto;
                     border-radius: 8px;
                     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
                 ">
-                <img src="assests/unseen_ins.png" alt="Unseen Instructions Performance" style="
+                <img src="assets/unseen_ins.png" alt="Unseen Instructions Performance" style="
                     width: 100%;
                     height: auto;
                     border-radius: 8px;
@@ -401,7 +401,7 @@
                 ">
             </div>
             <div class="media-container">
-                <img src="assests/Multimodal_bench.png" alt="Performance on Multimodal Benchmark" style="max-width: 60%;">
+                <img src="assets/Multimodal_bench.png" alt="Performance on Multimodal Benchmark" style="max-width: 60%;">
                 <p class="media-caption">
                     <strong>Performance on Multimodal Benchmark.</strong> Benefiting from the diversity of our reasoning data and the effectiveness of the two-stage training paradigm, IntentionVLA consistently surpasses all VLA baselines and even
                     outperforms the strong MLLM LLaVA on three benchmarks.
