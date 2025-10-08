@@ -279,16 +279,51 @@
                     Your browser does not support the video tag.
                 </video>
                 <p class="media-caption">
-                    We propose the first Vision-Language-Action model that can ground implicit user intentions in cluttered environments, achieving superior performance against SOTA methods in real-world experiments and demonstrating strong generalization to unseen tasks.
+                    We propose the first Vision-Language-Action model that can ground implicit user intentions in cluttered environments, achieving superior performance against SOTA methods(&pi;<sub>0</sub>, ECoT) in real-world experiments and demonstrating strong generalization to unseen tasks.
                 </p>
             </div>
         </div>
+
+        <!-- Abstract -->
+        <div class="content-section">
+            <h2 class="section-name">
+            <i class="fa-regular fa-feather-pointed"></i> Abstract
+            </h2>
+            <div class="media-container">
+                <img src="assets/intro.png" alt="Motivation" style="max-width: 90%;">
+                <p class="media-caption">
+                    Vision-Language-Action (VLA) models leverage pretrained vision-language models (VLMs) to couple perception with robotic control, offering a promising path toward general-purpose embodied intelligence. 
+However, current SOTA VLAs are primarily pretrained on multimodal tasks with limited relevance to embodied scenarios, and then finetuned to map explicit instructions to actions.
+Consequently, due to the lack of reasoning-intensive pretraining and reasoning-guided manipulation, these models are unable to perform implicit human intention reasoning required for complex, real-world interactions.
+To overcome these limitations, we propose IntentionVLA, a VLA framework with a curriculum training paradigm and an efficient inference mechanism. 
+Our proposed method first leverages carefully designed reasoning data that combine intention inference, spatial grounding, and compact embodied reasoning, endowing the model with both reasoning and perception capabilities. In the following finetuning stage,  IntentionVLA employs the compact reasoning outputs as contextual guidance for action generation, enabling  fast inference under indirect instructions.
+Experimental results show that IntentionVLA substantially outperforms &pi;<sub>0</sub>, achieving 18% higher success rates with direct instructions and 28% higher than ECoT under intention instructions.
+On out-of-distribution intention tasks, IntentionVLA achieves over twice the success rate of all baselines, and further enables zero-shot human-robot interaction with 40% success rate.
+These results highlight IntentionVLA as a promising paradigm for next-generation human-robot interaction (HRI) systems.
+                </p>
+            </div>
+
+        <!-- Motivation & Overview -->
+        <!-- <div class="content-section">
+            <h2 class="section-name">
+            <i class="fa-regular fa-bullseye"></i> Motivation
+            </h2>
+            <div class="media-container">
+                <img src="assets/motivation.png" alt="Motivation" style="max-width: 90%;">
+                <p class="media-caption">
+                    <strong>Problems with existing VLAs. </strong> Existing VLAs are finetuned to map explicit instructions to actionsoften fail to infer user intentions accurately and lack the ability to respond swiftly to dynamic environments. Given the instruction ''I want to call my friend'',  ECoT (right) reaches for the phone but infers slowly, while &pi;<sub>0</sub> (middle) misinterprets the instruction and grasps the rag. In contrast, our method (left) correctly infers the user's intention and enables rapid task completion.
+                </p>
+            </div>
+        </div> -->
 
         <!-- 方法介绍区域 -->
         <div class="content-section">
             <h2 class="section-name">
                 <i class="fas fa-cogs"></i> Method
             </h2>
+            <h3 class="section-name">
+                <i class="fas fa-cogs"></i> Model Architecture
+            </h3>
             <div class="media-container">
                 <img src="assets/model_arch.png" alt="IntentionVLA Architecture" style="max-width: 90%;">
                 <p class="media-caption">
@@ -299,9 +334,9 @@
 
         <!-- Pipeline -->
         <div class="content-section">
-            <h2 class="section-name">
-                <i class="fa-project-diagram"></i> Pipeline
-            </h2>
+            <h3 class="section-name">
+                <i class="fa-regular fa-diagram-project"></i> Reasoning Data Annotation Pipeline
+            </h3>
             <div class="media-container">
                 <img src="assets/pipeline.png" alt="Reasoning Data Annotation Pipeline" style="max-width: 90%;">
                 <p class="media-caption">
@@ -310,10 +345,10 @@
             </div>
         </div>
 
-        <!-- 性能与泛化能力区域 -->
+        <!-- Experiment -->
         <div class="content-section">
             <h2 class="section-name">
-                <i class="fas fa-chart-line"></i> State-Of-The-Art Performance
+                <i class="fas fa-chart-line"></i> State-Of-The-Art Performance 
             </h2>
             <!-- In-Distribution Tasks -->
             <div class="media-container">
@@ -370,6 +405,10 @@
                 <i class="fas fa-check-circle"></i> Generalization Ability
             </h2>
 
+            <h3 class="section-name" style="margin-top: 40px;">
+                Performance on OOD Manipulation Tasks
+            </h3>
+
             <div class="img-grid" style="
                 display: grid;
                 grid-template-columns: repeat(2, 1fr); /* 强制2列布局，确保左右排列 */
@@ -387,23 +426,31 @@
                     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
                 "> -->
                 <!-- calvin.jpeg：与simpler.jpeg垂直居中对齐 -->
+                <img src="assets/unseen_ins.png" alt="Unseen Instructions Performance" style="
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+                ">
                 <img src="assets/table2_3.png" alt="Performance on OOD Tasks" style="
                     width: 100%;
                     height: auto;
                     border-radius: 8px;
                     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
                 ">
-                <img src="assets/unseen_ins.png" alt="Unseen Instructions Performance" style="
-                    width: 100%;
-                    height: auto;
-                    border-radius: 8px;
-                    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-                ">
+                <p class="media-caption">
+                    <strong>Performance on OOD Manipulation Tasks.</strong> IntentionVLA generalizes beyond training data, understanding unseen intentions instructions, handling new objects with high precision, and responding quickly to human hand movements.
+                     These results demonstrate that IntentionVLA enables robust, intention-aware, and real-time HRI in dynamic scenarios.
+                </p>
             </div>
+
+            <h3 class="section-name" style="margin-top: 40px;">
+                Preserving Excellent Multimodal Reasoning Ability
+            </h3>
             <div class="media-container">
                 <img src="assets/Multimodal_bench.png" alt="Performance on Multimodal Benchmark" style="max-width: 60%;">
                 <p class="media-caption">
-                    <strong>Performance on Multimodal Benchmark.</strong> Benefiting from the diversity of our reasoning data and the effectiveness of the two-stage training paradigm, IntentionVLA consistently surpasses all VLA baselines and even
+                    <strong>Performance on Multimodal Benchmark.</strong> Benefiting from the diversity of our reasoning data and the effectiveness of the two-stage training paradigm, IntentionVLA preserves excellent mulimodal reasoning ability and consistently surpasses all VLA baselines, even
                     outperforms the strong MLLM LLaVA on three benchmarks.
                 </p>
             </div>
